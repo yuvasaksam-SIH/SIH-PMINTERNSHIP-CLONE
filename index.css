@@ -1,0 +1,599 @@
+/* ---------- reset & base ---------- */
+* { box-sizing: border-box; }
+html,body { height:500%; }
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:#f5f7f9;
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* everything stays on left */
+  background: #f8f8f8;
+  padding: 10px 20px;
+}
+
+/* Logo area */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* space between logos */
+}
+
+.gov-logo {
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #eee;
+}
+
+/* Navbar */
+.topnav ul {
+  display: flex;
+  list-style: none;
+  margin: 10;
+  padding: 20;
+  gap: 20px; /* spacing between items */
+}
+
+.topnav li {
+  font-weight: 800;
+ 
+}
+
+.topnav a {
+  text-decoration: none;
+  color: #333;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Header Styling */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+/* Buttons */
+.btn-outline {
+  border: 1px solid #ff9900;
+  background: none;
+  padding: 1px 2px;
+  border-radius: 4px;
+  color: #ff9900;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #fff2e0;
+}
+
+.btn-solid {
+  background-color: #f68b1f;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* color variables */
+:root{
+  --orange:#ff7a1a;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --border:#e6e9ee;
+  --accent:#4f46e5;
+}
+
+/* ---------- TOP BAR ---------- */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:0px 0px;
+  background:var(--card-bg);
+  border-bottom:5px solid var(--border);
+  top:0px;
+  bottom: 0px;
+  z-index:10;
+}
+
+/* left area */
+.topbar-left{
+   display:flex; 
+  align-items:center;
+   gap:5px; 
+   min-width:100px;
+   float: left;
+   flex-direction:column-reverse;
+   }
+.gov-logo{ 
+  width:150px;
+   height:100px;
+    object-fit:cover;
+     border-radius:4px;
+      background:#eee; 
+      float:left;
+    }
+    .lan-logo{
+      width:200px;
+      height:100px;
+      float:right;
+    }
+    .help-logo{
+      width:100px;
+      height:100px;
+      object-fit:cover; 
+      float:left;
+      margin-top:50px;
+    }
+  .d2-logo{
+      width:150px;
+      height:100px;
+      object-fit:cover; 
+      float:left;
+      margin-top:100px;
+    }
+
+/* center nav */
+.topnav ul li{
+   display:inline-block;
+   
+}
+.topnav ul li a{
+  text-decoration: none;
+  color:#333;
+  font-weight: 500;
+}
+/* actions */
+.top-actions{
+   display:flex;
+    gap:20px;
+     align-items:center; 
+     min-width:210px;
+      justify-content:left;
+     }
+.btn{
+  padding:7px 25px;
+  border-radius:4px;
+  font-size:12px;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+.btn-outline{ 
+  background:white;
+   color:var(--orange);
+    border-color:var(--orange);
+   }
+.btn-primary{
+   background:var(--orange);
+    color:white;
+     border:none;
+    }
+.btn-danger{
+   background:#e53935; 
+   color:rgb(255, 255, 255);
+    border:none;
+   }
+.btn-purple{ 
+  background:var(--accent); 
+  color:white;
+   border:none;
+  }
+
+/* ---------- MAIN GRID ---------- */
+.container{
+  max-width:500px;
+  margin:10px auto;
+  display:grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap:10px;
+  align-items:start;
+  padding:0 10px;
+}
+.footer{
+  max-width:500px;
+  margin:10px;
+  padding:7px 8px;
+  color:var(--muted);
+  display:flex;
+  align-items: center;
+  margin-right: 50px;
+}
+.container {
+  max-width:10000px;   /* reduced from 1010px */
+  margin: 5px auto;
+  display:grid;
+  grid-template-columns: 230px 1fr 250px; /* slightly reduced column widths */
+  gap: 5px;          /* slightly reduced gap */
+  align-items: flex-start;
+  padding: 0px 0px;    /* smaller side padding */
+/* card common */
+.card{
+  width: 100%;
+  height: 100%;
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:9px;
+  padding:5px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+  
+}
+
+.my-current-status {
+  position: relative;
+  width: 200px;
+  height: 200px; /* adjust height as needed */
+}
+
+.internship-started {
+  position: absolute;
+  bottom: 10px;  /* move where you want inside */
+  left: 50px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Removed extraneous curly brace and block causing syntax error */
+
+    .status-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .status-title {
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 100px;
+      color: #ff6600;
+    }
+
+    .progressbar {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      counter-reset: step;
+      position: relative;
+      padding: 2px 4px;
+    }
+
+    .progressbar::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #d3d3d3;
+      z-index: -1;
+    }
+
+.nav-links{
+  display:flex;
+  justify-content: flex-end;
+  align-items:14px;
+  gap: 10px;
+  padding-right:300px;
+}
+.nav-links  a.active{
+  color:black; 
+  font-weight:600;
+  background-color: #f58220;
+  padding: 5px 10px;
+  border-radius: 15px;
+  
+   }
+
+.nav-links a{ 
+  text-decoration: none;
+    color:#333; 
+    font-size:15px; 
+    font-weight:500; 
+    transition:color 0.3s;
+}
+.nav-links a:hover{
+   color:var(--orange); 
+  }
+  
+    .progress-step {
+      position: relative;
+      text-align: center;
+      width: 50%;
+    }
+
+    .progress-step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border: 2px solid #d3d3d3;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background-color: white;
+      font-weight: bold;
+      color:#1c1e1c;
+    }
+
+    .progress-step.active::before  {
+      border-color: #ff6600;
+      background-color: #1a0c02;
+      color: white;
+    }
+
+    
+
+    .progress-step p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* progress line fill */
+    .progressbar::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      height: 4px;
+      background-color: #1c1e1c;
+      z-index: -1;
+      width: 60%; /* <- change this according to current progress */
+      transition: width 0.3s ease;
+    }
+
+/* ---------- SIDEBAR ---------- */
+.sidebar .profile-card{ 
+ display: flex;
+ flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding-bottom: 100px;
+   }
+.avatar{
+  width:100px;
+   height:100px;
+    background:#dfe6ee; 
+    border-radius:100%; 
+    margin:6px auto;
+    padding: 1px 0px;
+}
+.avator-logo {
+  display:flex;
+  margin: 0 auto 10px auto; /* center horizontally, add bottom space */
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background: #e6e9ee;
+  padding: 5px;
+
+}
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.candidate-id{
+   font-weight:600; 
+   margin-top:60px;
+   }
+.profile-completed{ 
+  color:var(--muted);
+   font-size:13px;
+    margin-top:20px;
+    margin-left: 0px;
+   }
+.profile-links{ 
+  margin-top:12px; 
+  display:flex;
+   flex-direction:column; 
+   gap:6px;
+   }
+.profile-links a{ 
+  color:#2563eb; 
+  text-decoration:none;
+   font-size:13px;
+
+   }
+.logout{ 
+  
+  color:#cf3f3f;
+   font-size:13px; 
+   font-weight:600; 
+   cursor:pointer;
+   }
+
+/* grievance */
+.grievance h4{ 
+  margin:0 0 8px 0;
+   font-size:15px;
+   }
+.w-full{ 
+  width:100%; 
+}
+
+/* ---------- CENTER CONTENT ---------- */
+.content{ display:flex; flex-direction:column; gap:14px; }
+
+/* status-card */
+.status-card h2{ margin:0 0 12px 0; font-size:18px; }
+
+/* progress row - flexible spacing */
+.progress-row{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  background:linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+  padding:12px;
+  border-radius:10px;
+}
+.progress-row .step{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 12px;
+  border-radius:30px;
+  background:#f3f4f6;
+  min-width:130px;
+  justify-content:flex-start;
+  flex-shrink:0;
+  box-shadow: none;
+}
+.progress-row .step .dot{
+  width:28px;
+   height:28px;
+    border-radius:50%;
+  background:#fff;
+   border:2px solid #d1d5db;
+    display:flex;
+     align-items:center;
+      justify-content:center;
+  font-size:12px;
+   font-weight:600;
+}
+.progress-row .step.active{
+  background:var(--orange);
+  color:white;
+}
+.progress-row .step.active .dot{
+  background:rgba(255,255,255,0.15); 
+  border-color:rgba(255,255,255,0.25); 
+  color:white;
+}
+
+/* profile steps */
+.profile-steps{ 
+  display:flex;
+   gap:10px; 
+   list-style:none;
+    padding:12px 0;
+     margin:0; 
+     flex-wrap:wrap;
+     }
+.profile-steps .ps{
+  display:flex; 
+  align-items:center;
+   gap:8px;
+    padding:8px 12px; 
+    border-radius:999px;
+     background:#f3f4f6; 
+     font-size:13px;
+}
+.profile-steps .ps.active{
+   background:var(--orange); 
+   color:white;
+   }
+   
+
+/* ekyc box */
+.ekyc-box{ 
+  border:1px dashed #e6e9ee;
+   padding:14px; 
+   border-radius:8px;
+    margin-top:6px;
+     background:linear-gradient(90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+      }
+.ekyc-options{
+   display:flex;
+   gap:10px;
+    margin-bottom:10px;
+   }
+.field-label{ 
+  font-size:13px;
+   color:var(--muted);
+    margin-bottom:6px;
+     display:block; 
+    }
+.field{
+   width:100%;
+    padding:10px;
+     border-radius:6px; 
+     border:1px solid #cbd5e1;
+      font-size:14px; }
+
+/* ---------- NOTIFICATIONS ---------- */
+.notifications .note{ padding:10px; 
+  border-left:4px solid var(--orange); 
+  background:#fbfbfb;
+   margin-bottom:10px;
+    border-radius:6px; 
+  }
+.note-date{ 
+  font-size:12px;
+   color:var(--muted); 
+   margin-bottom:6px;
+   }
+.note-title{
+   font-weight:600; 
+   font-size:13px;
+   }
+
+/* ---------- FOOTER ---------- */
+.site-footer{
+  max-width:700px;
+   margin:16px auto;
+    padding:5px 10px; 
+     display:flex;
+      justify-content:center;
+       font-size:20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px){
+  .container{ grid-template-columns: 1fr; padding:0 12px; }
+  .topnav{ display:none; }
+  .top-actions{ justify-content:flex-end; }
+  .gov-logo{ display:none; }
+  .topbar-left .org-sub{ display:none; }
+}
